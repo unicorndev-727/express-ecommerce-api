@@ -38,13 +38,13 @@ Here are some of the project's features
 Clone the project
 
 ```bash
-git clone https://github.com/satnaing/haru-api.git
+git https://github.com/unicorndev-727/haru-ecommerce-api
 ```
 
 Go to the project directory
 
 ```bash
-cd haru-api
+cd haru-ecommerce-api
 ```
 
 Remove remote origin
