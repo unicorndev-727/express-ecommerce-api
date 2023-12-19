@@ -102,7 +102,7 @@ DATABASE_URL="postgresql://testuser:test123@postgres:5432/test_db?schema=public"
 <p align="center">⬇️</p>
 
 ```bash
-DATABASE_URL="postgresql://testuser:test123@localhost:5432/test_db?schema=public"
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/haru?schema=public"
 ```
 
 </details>
@@ -124,7 +124,7 @@ npm run dev:down
 To run tests, create a file called **.env.test** at the root of the project.
 Then add the following environment variables.  
 `NODE_ENV=testing`  
-`DATABASE_URL="postgresql://prisma:prisma@localhost:5437/tests"`
+`DATABASE_URL="postgresql://postgres:postgres@localhost:5432/test?schema=public"`
 
 Note! dotenv-cli must be installed golbally before running any test
 
