@@ -14,6 +14,7 @@ import customers from "./routers/customers";
 import admins from "./routers/admins";
 import auth from "./routers/auth";
 import orders from "./routers/orders";
+import checkouts from "./routers/checkout";
 
 const app = express();
 
@@ -42,6 +43,7 @@ app.use("/api/v1/orders", orders);
 app.use("/api/v1/customers", customers);
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/admins", admins);
+app.use("/api/v1/checkouts", checkouts);
 
 // 404 error if route not found
 app.all("*", (req, res, next) =>
