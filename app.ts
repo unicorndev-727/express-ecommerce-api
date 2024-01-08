@@ -4,6 +4,7 @@ import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import cors from "cors";
 import ErrorResponse from "./utils/errorResponse";
+// import listEndpoints from "express-list-endpoints";
 import { resource404Error } from "./utils/errorObject";
 import errorHandler from "./middlewares/errorHandler";
 
@@ -14,6 +15,7 @@ import customers from "./routers/customers";
 import admins from "./routers/admins";
 import auth from "./routers/auth";
 import orders from "./routers/orders";
+import stripe from "./routers/checkouts/stripe";
 
 const app = express();
 
@@ -42,6 +44,7 @@ app.use("/api/v1/orders", orders);
 app.use("/api/v1/customers", customers);
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/admins", admins);
+app.use("/api/v1/checkouts/stripe", stripe);
 
 // 404 error if route not found
 app.all("*", (req, res, next) =>
@@ -49,5 +52,6 @@ app.all("*", (req, res, next) =>
 );
 
 app.use(errorHandler);
+// console.log(listEndpoints(app))
 
 export default app;
